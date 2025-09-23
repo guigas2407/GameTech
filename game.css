@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #8C162C;
+    --secondary: #9BBFAE;
+    --accent: #86A694;
+    --text-secondary: #54594D;
+    --background: #0D0D0D;
+    --backgorund-secondary: #323030d8;
+    --text: #F2F2F2;
+}
+
+body {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: var(--background);
+    color: var(--text);
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+button {
+    cursor: pointer;
+    background: var(--primary);
+    border: none;
+    color: var(--secondary);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+ul {
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 24px;
+    background: linear-gradient(180deg, rgba(13, 13, 13, 0.95), rgba(50, 48, 48, 0.35));
+    border-bottom: 1px solid rgba(84, 89, 77, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(6px);
+}
+
+.nav .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav .brand img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.nav .menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav .menu ul {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.nav .menu li {
+    list-style: none;
+}
+
+.nav .menu a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform .12s ease, background .12s ease, color .12s ease;
+}
+
+.nav .menu a:hover,
+.nav .menu a:focus {
+    background: linear-gradient(90deg, rgba(140, 22, 44, 0.12), rgba(134, 166, 148, 0.04));
+    transform: translateY(-2px);
+    outline: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.nav .menu a:active {
+    transform: translateY(0);
+}
+
+.nav .cta {
+    margin-left: 8px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 800;
+    background: linear-gradient(180deg, var(--primary), #6f1122);
+    color: var(--secondary);
+    box-shadow: 0 6px 18px rgba(140, 22, 44, 0.25);
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.nav .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(140, 22, 44, 0.34);
+}
+
+.nav .hamburger {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: var(--text);
+    font-size: 22px;
+    padding: 8px;
+}
+
+@media (max-width: 880px) {
+    .nav {
+        padding: 10px 16px;
+    }
+
+    .nav .menu ul {
+        display: none;
+    }
+
+    .nav .hamburger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav .menu.mobile {
+        position: absolute;
+        top: 68px;
+        right: 16px;
+        background: linear-gradient(180deg, rgba(13, 13, 13, 0.98), rgba(50, 48, 48, 0.96));
+        border-radius: 12px;
+        padding: 12px;
+        width: 220px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav .menu.mobile.active {
+        display: flex;
+    }
+
+    .nav .menu.mobile a {
+        padding: 10px;
+        border-radius: 8px;
+    }
+}
+
+.content {
+    max-width: 100%;
+    min-width: 350px;
+}
+
+.games {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.2rem;
+    padding: 20px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.game {
+    background: var(--backgorund-secondary);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+.game img {
+    width: 400px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    display: block;
+    object-fit: cover;
+}
+
+.game .info {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.game:hover .info {
+    opacity: 1;
+}
+
+.buttons button {
+    background: none;
+}
+
+#prev {
+    transform: rotate(180deg);
+}
