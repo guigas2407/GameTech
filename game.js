@@ -1,24 +1,57 @@
-const btn = document.querySelector('.nav .hamburger');
-const mobile = document.getElementById('mobileMenu');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+const items = document.querySelectorAll('.item');
+const dots = document.querySelectorAll('.dot');
+const numberIndicator = document.querySelector('.numbers');
 
-btn?.addEventListener('click', () => {
-    const isOpen = mobile.classList.toggle('active');
-    btn.setAttribute('aria-expanded', String(isOpen));
-});
+let active = 0;
+const totalItems = items.length;
+let timer; // Variável para o autoplay
 
+// Função principal que atualiza o slide
+function showSlide(direction) {
+  // Remove a classe 'active' do item e do ponto atuais
+  document.querySelector('.item.active').classList.remove('active');
+  document.querySelector('.dot.active').classList.remove('active');
 
-const container = document.getElementById('games');
-const slides = document.querySelectorAll('.game');
-let index = 0;
+  // Calcula o próximo índice
+  if (direction === 'next') {
+    active = (active + 1) % totalItems;
+  } else if (direction === 'prev') {
+    active = (active - 1 + totalItems) % totalItems;
+  }
 
-function goToSlide(i) {
-    if (i < 0 || i >= slides.length) return;
-    index = i;
-    container.scrollTo({
-        left: slides[i].offsetLeft,
-        behavior: 'smooth'
-    });
+  // Adiciona a classe 'active' ao novo item e ponto
+  items[active].classList.add('active');
+  dots[active].classList.add('active');
+
+  // Atualiza o número do indicador
+  numberIndicator.textContent = String(active + 1).padStart(2, '0');
+
+  // Reinicia o timer do autoplay
+  resetTimer();
 }
 
-document.getElementById('next').addEventListener('click', () => goToSlide(index + 1));
-document.getElementById('prev').addEventListener('click', () => goToSlide(index - 1));
+// Função para avançar para o próximo slide
+function nextSlide() {
+  showSlide('next');
+}
+
+// Função para voltar para o slide anterior
+function prevSlide() {
+  showSlide('prev');
+}
+
+// Configura os eventos de clique nos botões
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+
+// --- Autoplay (Opcional) ---
+// Função que reinicia o timer
+function resetTimer() {
+  clearInterval(timer); // Limpa o timer anterior
+  timer = setInterval(nextSlide, 8000); // Inicia um novo timer de 5 segundos
+}
+
+// Inicia o autoplay quando a página carrega
+resetTimer();

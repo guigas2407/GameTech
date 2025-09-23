@@ -1,104 +1,204 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="game.css">
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="game.css" />
+    <link rel="stylesheet" href="responsividade.css" />
     <title>GameTech</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <header>
+      <div class="logo">GameTech</div>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Jogos</li>
+          <li>Contato</li>
+        </ul>
+      </nav>
+    </header>
 
-    <nav class="nav">
-        <div class="brand">
-            <img src="https://img.icons8.com/?size=100&id=eIvodJbbBLyD&format=png&color=FFFFFF" alt="Logo do site">
-            <span class="sr-only">GameTech</span>
+    <main class="container">
+      <div class="tech-circle">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="circle-4"></div>
+        <div class="circle-5"></div>
+      </div>
+
+      <div class="list">
+        <div class="item active">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/1200x/0a/a9/a2/0aa9a2dca387e68cdf7989b1c895824a.jpg"
+              alt="Ark 2"
+            />
+          </div>
+          <div class="content">
+            <p class="product-tag">Sobrevivência</p>
+            <p class="product-name">Ark 2</p>
+            <p class="description">
+              Uma continuação do famoso ARK: Survival Evolved, trazendo gráficos
+              de última geração e uma experiência ainda mais imersiva.
+              Ambientado em um mundo pré-histórico repleto de dinossauros e
+              perigos naturais.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
         </div>
 
-        <button class="hamburger" aria-expanded="false" aria-label="Abrir menu">
-            ☰
+        <div class="item">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/736x/ad/f0/99/adf0997ffd52a379168e5f37b29d42f4.jpg"
+              alt="GTA 6"
+            />
+          </div>
+          <div class="content">
+            <p class="product-tag">Mundo Aberto</p>
+            <p class="product-name">GTA 6</p>
+            <p class="description">
+              Um dos jogos mais aguardados da década. GTA 6 promete elevar o
+              padrão da série, trazendo um mapa imenso inspirado em Vice City e
+              novas mecânicas de jogabilidade com mais liberdade ao jogador.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/1200x/03/6c/11/036c11b9622ee99d9a7af4a5c6b91c5a.jpg"
+              alt="Red Dead Redemption 2"
+            />
+          </div>
+          <div class="content">
+            <p class="product-tag">Aventura</p>
+            <p class="product-name">Red Dead Redemption 2</p>
+            <p class="description">
+              Uma obra-prima da Rockstar Games que se passa no Velho Oeste
+              americano. Oferece um mundo aberto riquíssimo, com caça,
+              exploração e escolhas que afetam o rumo de uma história profunda.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/1200x/5c/8f/a1/5c8fa16010c79bdaf47051f2579e3f31.jpg"
+              alt="Batman: Arkham Origins"
+            />
+          </div>
+          <div class="content">
+            <p class="product-tag">Ação</p>
+            <p class="product-name">Batman: Arkham Origins</p>
+            <p class="description">
+              Parte da aclamada série Batman Arkham, este jogo mostra a
+              juventude do Cavaleiro das Trevas. Com combates fluidos,
+              exploração e vilões marcantes na sombria Gotham City.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/1200x/a7/78/3b/a7783bde27a4771fee383cd45d3adf3a.jpg"
+              alt="Dead by Daylight"
+            />
+          </div>
+          <div class="content">
+            <p class="product-tag">Terror Multiplayer</p>
+            <p class="product-name">Dead by Daylight</p>
+            <p class="description">
+              Um game de terror multiplayer assimétrico, onde 4 sobreviventes
+              devem escapar de 1 assassino. O jogo mistura estratégia,
+              furtividade e trabalho em equipe em meio a uma tensão constante.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/1200x/9f/27/71/9f2771d983fa9217b334c1649e79f4e6.jpg"
+              alt="Fortnite"
+            />
+          </div>
+          <div class="content">
+            <p class="product-tag">Battle Royale</p>
+            <p class="product-name">Fortnite</p>
+            <p class="description">
+              Um dos maiores fenômenos dos games, Fortnite é um battle royale em
+              que 100 jogadores competem até restar apenas um. Se destaca pelo
+              sistema de construção e eventos ao vivo.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrows">
+        <button class="arrow-btn" id="prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-caret-left-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+            />
+          </svg>
         </button>
+        <button class="arrow-btn" id="next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-caret-right-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+            />
+          </svg>
+        </button>
+      </div>
 
-        <div class="menu" aria-hidden="false">
-            <ul>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">Utilidades</a></li>
-                <li><a href="#">Acessórios</a></li>
-            </ul>
-
-            <a class="cta" href="#">Jogar</a>
+      <div class="indicators">
+        <div class="numbers">01</div>
+        <div class="dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
         </div>
-
-        <div class="menu mobile" id="mobileMenu">
-            <a href="#">Games</a>
-            <a href="#">Utilidades</a>
-            <a href="#">Acessórios</a>
-            <a class="cta" href="#">Jogar</a>
-        </div>
-    </nav>
-
-
-    <main class="content">
-
-        <section class="games">
-
-            <div class="game">
-                <img src="https://i.pinimg.com/1200x/0a/a9/a2/0aa9a2dca387e68cdf7989b1c895824a.jpg" alt="ark2">
-                <div class="info">
-                    <h1>🎮 Ark 2</h1>
-                    <p>Uma continuação do famoso ARK: Survival Evolved, trazendo gráficos de última geração e uma experiência ainda mais imersiva. Ambientado em um mundo pré-histórico repleto de dinossauros e perigos naturais, Ark 2 aposta em sobrevivência, exploração e construção. O jogador precisa coletar recursos, domar criaturas, criar bases e formar tribos para enfrentar desafios cada vez maiores. Destaque para a presença do ator Vin Diesel no enredo, interpretando Santiago.</p>
-                </div>
-            </div>
-            <div class="game">
-                <img src="https://i.pinimg.com/736x/ad/f0/99/adf0997ffd52a379168e5f37b29d42f4.jpg" alt="gta6">
-                <div class="info">
-                    <h1>🚗 GTA 6 (Grand Theft Auto VI)</h1>
-                    <p>Um dos jogos mais aguardados da década. GTA 6 promete elevar o padrão da série, trazendo um mapa imenso inspirado em Vice City e novas mecânicas de jogabilidade. A Rockstar aposta em uma narrativa envolvente, com múltiplos protagonistas e mais liberdade ao jogador. O game mistura ação, direção, crimes e um mundo aberto vivo, com atenção aos detalhes que tornam a experiência ainda mais realista.</p>
-                </div>
-            </div>
-            <div class="game">
-                <img src="https://i.pinimg.com/1200x/03/6c/11/036c11b9622ee99d9a7af4a5c6b91c5a.jpg" alt="rdr2">
-                <div class="info">
-                    <h1>🤠 Red Dead Redemption 2</h1>
-                    <p>Considerado uma obra-prima da Rockstar Games, RDR2 se passa no Velho Oeste americano de 1899. O jogador assume o papel de Arthur Morgan, um fora da lei membro da gangue Van der Linde. O jogo oferece um mundo aberto riquíssimo, com caça, pesca, exploração, tiroteios intensos e escolhas que afetam o rumo da história. É conhecido pela narrativa profunda, personagens marcantes e ambientação cinematográfica.</p>
-                </div>
-            </div><br>
-            <div class="game">
-                <img src="https://i.pinimg.com/1200x/5c/8f/a1/5c8fa16010c79bdaf47051f2579e3f31.jpg" alt="batman">
-                <div class="info">
-                    <h1>🦇 Batman: Arkham Origins</h1>
-                    <p>Parte da aclamada série Batman Arkham, este jogo mostra a juventude do Cavaleiro das Trevas enfrentando seus primeiros inimigos. A trama se passa antes dos eventos de Arkham Asylum, apresentando um Batman menos experiente e mais agressivo. Com combates fluidos, exploração em mundo aberto e vilões marcantes como Máscara Negra, Exterminador e Coringa, o jogo mergulha na atmosfera sombria de Gotham City.</p>
-                </div>
-            </div>
-            <div class="game">
-                <img src="https://i.pinimg.com/1200x/a7/78/3b/a7783bde27a4771fee383cd45d3adf3a.jpg" alt="dbd">
-                <div class="info">
-                    <h1>👻 Dead by Daylight</h1>
-                    <p>Um game de terror multiplayer assimétrico, onde 4 sobreviventes devem escapar de 1 assassino. Cada partida é diferente, com cenários sombrios, armadilhas e tensão constante. O jogo mistura estratégia, furtividade e trabalho em equipe, enquanto o assassino precisa eliminar todos antes que eles consigam reparar os geradores e escapar. Dead by Daylight também é famoso por trazer personagens icônicos do cinema e de outras franquias, como Michael Myers, Freddy Krueger e até o Demogorgon de Stranger Things.</p>
-                </div>
-            </div>
-            <div class="game">
-                <img src="https://i.pinimg.com/1200x/9f/27/71/9f2771d983fa9217b334c1649e79f4e6.jpg" alt="fornite">
-                <div class="info">
-                    <h1>🕹️ Fortnite</h1>
-                    <p>Um dos maiores fenômenos dos games, Fortnite é um battle royale em que 100 jogadores competem até restar apenas um sobrevivente. Além da jogabilidade dinâmica, o jogo se destaca pelo sistema de construção, eventos ao vivo que mudam o mapa e colaborações épicas com filmes, séries e artistas. Fortnite também conta com modos criativos e eventos sazonais que mantêm a comunidade sempre ativa.</p>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="buttons">
-            <button id="prev"><img src="https://img.icons8.com/?size=100&id=26138&format=png&color=8C162C"></button>
-            <button id="next"><img src="https://img.icons8.com/?size=100&id=26138&format=png&color=8C162C"></button>
-        </section>
+      </div>
     </main>
-
-    <footer>
-
-    </footer>
-    <script href="game.js"></script>
-</body>
-
+  </body>
+  <script src="./game.js"></script>
 </html>
