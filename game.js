@@ -1,57 +1,43 @@
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
-const items = document.querySelectorAll('.item');
-const dots = document.querySelectorAll('.dot');
-const numberIndicator = document.querySelector('.numbers');
+document.querySelectorAll('.container').forEach((container) => {
+  const items = container.querySelectorAll('.item');
+  const dots = container.querySelectorAll('.dot');
+  const numberIndicator = container.querySelector('.numbers');
+  const prevButton = container.querySelector('.arrow-btn-prev');
+  const nextButton = container.querySelector('.arrow-btn-next');
+  let active = 0;
+  let timer;
 
-let active = 0;
-const totalItems = items.length;
-let timer; // Variável para o autoplay
+  function showSlide(direction) {
+    items[active].classList.remove('active');
+    dots[active].classList.remove('active');
 
-// Função principal que atualiza o slide
-function showSlide(direction) {
-  // Remove a classe 'active' do item e do ponto atuais
-  document.querySelector('.item.active').classList.remove('active');
-  document.querySelector('.dot.active').classList.remove('active');
+    if (direction === 'next') {
+      active = (active + 1) % items.length;
+    } else if (direction === 'prev') {
+      active = (active - 1 + items.length) % items.length;
+    }
 
-  // Calcula o próximo índice
-  if (direction === 'next') {
-    active = (active + 1) % totalItems;
-  } else if (direction === 'prev') {
-    active = (active - 1 + totalItems) % totalItems;
+    items[active].classList.add('active');
+    dots[active].classList.add('active');
+    if (numberIndicator) {
+      numberIndicator.textContent = String(active + 1).padStart(2, '0');
+    }
+    resetTimer();
   }
 
-  // Adiciona a classe 'active' ao novo item e ponto
-  items[active].classList.add('active');
-  dots[active].classList.add('active');
+  function nextSlide() {
+    showSlide('next');
+  }
+  function prevSlide() {
+    showSlide('prev');
+  }
 
-  // Atualiza o número do indicador
-  numberIndicator.textContent = String(active + 1).padStart(2, '0');
+  if (prevButton) prevButton.addEventListener('click', prevSlide);
+  if (nextButton) nextButton.addEventListener('click', nextSlide);
 
-  // Reinicia o timer do autoplay
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(nextSlide, 5000);
+  }
   resetTimer();
-}
-
-// Função para avançar para o próximo slide
-function nextSlide() {
-  showSlide('next');
-}
-
-// Função para voltar para o slide anterior
-function prevSlide() {
-  showSlide('prev');
-}
-
-// Configura os eventos de clique nos botões
-prevButton.addEventListener('click', prevSlide);
-nextButton.addEventListener('click', nextSlide);
-
-// --- Autoplay (Opcional) ---
-// Função que reinicia o timer
-function resetTimer() {
-  clearInterval(timer); // Limpa o timer anterior
-  timer = setInterval(nextSlide, 8000); // Inicia um novo timer de 5 segundos
-}
-
-// Inicia o autoplay quando a página carrega
-resetTimer();
+});

@@ -23,14 +23,14 @@
       <div class="logo">GameTech</div>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>Jogos</li>
-          <li>Contato</li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#utilidades">Utilidades</a></li>
+          <li><a href="#acessorios">Acessórios</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="container">
+    <main class="container" id="games">
       <div class="tech-circle">
         <div class="circle-1"></div>
         <div class="circle-2"></div>
@@ -157,7 +157,7 @@
       </div>
 
       <div class="arrows">
-        <button class="arrow-btn" id="prev">
+        <button class="arrow-btn-prev">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -171,7 +171,7 @@
             />
           </svg>
         </button>
-        <button class="arrow-btn" id="next">
+        <button class="arrow-btn-next">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -199,6 +199,279 @@
         </div>
       </div>
     </main>
+
+    <main class="container" id="utilidades">
+      <div class="tech-circle">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="circle-4"></div>
+        <div class="circle-5"></div>
+      </div>
+
+      <div class="list">
+        <div class="item active">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/736x/34/11/79/3411796671da29564189965ec6cdd499.jpg"
+              alt="Cadeira Gamer"
+            />
+          </div>
+
+          <div class="content">
+            <p class="product-tag">Conforto</p>
+            <p class="product-name">Gamer Snake Lancaster</p>
+            <p class="description">
+              Uma cadeira projetada para longas sessões de jogo, oferecendo
+              suporte ergonômico e conforto. Com ajuste de altura e reclinação,
+              é perfeita para quem passa horas jogando.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/736x/c0/9c/a6/c09ca6c4a7d1eaebe45e2e0adb2c0f0d.jpg"
+              alt="Headsert Gamer"
+            />
+          </div>
+
+          <div class="content">
+            <p class="product-tag">Qualidade</p>
+            <p class="product-name">Headset Gamer</p>
+            <p class="description">
+              Um headset com som surround 7.1, microfone com cancelamento de
+              ruído e conforto para longas sessões de jogo. Ideal para
+              comunicação clara com a equipe e imersão total no jogo.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/736x/65/84/17/6584175af17d1067d0259f42611d15aa.jpg"
+              alt="Mouse Gamer"
+            />
+          </div>
+
+          <div class="content">
+            <p class="product-tag">Conforto articular</p>
+            <p class="product-name">Mouse Gamer</p>
+            <p class="description">
+              Um mouse gamer com sensor de alta precisão, iluminação RGB e
+              design ergonômico. Perfeito para longas sessões de jogo,
+              oferecendo conforto e desempenho.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/736x/08/d5/ff/08d5ff465fe5c9c99a35247ecc04e9cd.jpg"
+              alt="Teclado Anatômico Gamer"
+            />
+          </div>
+
+          <div class="content">
+            <p class="product-tag">Conforto articular</p>
+            <p class="product-name">Teclado Anatômico Mecânico</p>
+            <p class="description">
+              Um teclado projetado para longas sessões de jogo, oferecendo
+              suporte ergonômico e conforto. Com teclas mecânicas e iluminação
+              RGB, é perfeito para quem passa horas jogando e sente dores no
+              pulso.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrows">
+        <button class="arrow-btn-prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-caret-left-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+            />
+          </svg>
+        </button>
+        <button class="arrow-btn-next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-caret-right-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="indicators">
+        <div class="numbers">01</div>
+        <div class="dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </main>
+
+    <main class="container" id="acessorios">
+      <div class="tech-circle">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="circle-4"></div>
+        <div class="circle-5"></div>
+      </div>
+
+      <div class="list">
+        <div class="item active">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/1200x/9f/cf/29/9fcf29d6811b9bc1ac098301ca8725ca.jpg"
+              alt="Gaming BG500"
+            />
+          </div>
+
+          <div class="content">
+            <p class="product-tag">Praticidade</p>
+            <p class="product-name">Suporte para notebook</p>
+            <p class="description">
+              Um suporte projetado para longas sessões de jogo, oferecendo um
+              resfriamento eficiente. Com ajuste de altura e reclinação, é
+              perfeito para quem passa horas jogando.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/1200x/0f/40/4f/0f404faadb9141ee60f8e3b6e40bb98d.jpg"
+              alt="Mousepad Gamer"
+            />
+          </div>
+
+          <div class="content">
+            <p class="product-tag">Beleza</p>
+            <p class="product-name">Mousepad Gamer</p>
+            <p class="description">
+              Um mousepad projetado para longas sessões de jogo, oferecendo um
+              deslizamento suave e controle preciso. Com material
+              antiderrapante, é perfeito para quem busca conforto e estilo.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/1200x/d2/aa/0a/d2aa0a73575fa78be338f23dd8f1d5da.jpg"
+              alt="Microfone Gamer"
+            />
+          </div>
+
+          <div class="content">
+            <p class="product-tag">Qualidade</p>
+            <p class="product-name">Microfone Gamer</p>
+            <p class="description">
+              Um microfone projetado para quem ama jogar com os amigos e não
+              aguenta mais eles reclamando de seu audio, oferecendo um som
+              cristalino e captação precisa, nosso microfone gamer tambem nao
+              captura ruidos, apenas a sua voz.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="product-img">
+            <img
+              src="https://i.pinimg.com/736x/e3/78/07/e3780719b93689e67255cf3832b3b031.jpg"
+              alt="Gabinete gamer"
+            />
+          </div>
+
+          <div class="content">
+            <p class="product-tag">Estilo</p>
+            <p class="product-name">Gabinete gamer</p>
+            <p class="description">
+              Um gabinete que entrega um design moderno e estiloso, perfeito
+              para aqueles que querem montar um setup gamer de respeito, alem de
+              ser espaçoso e com uma ótima refrigeração.
+            </p>
+            <button class="btn">Saiba mais</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrows">
+        <button class="arrow-btn-prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-caret-left-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+            />
+          </svg>
+        </button>
+        <button class="arrow-btn-next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-caret-right-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="indicators">
+        <div class="numbers">01</div>
+        <div class="dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Guilherme Meyer Soares. Todos os direitos reservados.</p>
+    </footer>
   </body>
   <script src="./game.js"></script>
 </html>
